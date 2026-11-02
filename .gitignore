@@ -181,6 +181,7 @@ pyrightconfig.json
 # dbt
 dbt_packages/
 logs/
+.user.yml
 
 # VS Code
 .vscode/
