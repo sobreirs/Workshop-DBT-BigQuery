@@ -1,0 +1,25 @@
+[project]
+name = "workshop-dbt-bigquery"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Matheus Sobreira ",email = "matheussobreira2702@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+dependencies = [
+    "dbt-core (>=1.12.6,<2.0.0)",
+    "dbt-bigquery (>=1.12.1,<2.0.0)",
+    "pre-commit (>=4.7.0,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.7.0,<5.0.0)",
+    "sqlfluff (>=4.5.0,<5.0.0)"
+]
