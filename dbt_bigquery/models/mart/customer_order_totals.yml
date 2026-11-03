@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customer_order_totals
+    description: "Total gasto por cliente"
+
+    columns:
+      - name: customer_id
+        description: "Identificador do cliente"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_spent
+        description: "Valor total gasto pelo cliente"
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
